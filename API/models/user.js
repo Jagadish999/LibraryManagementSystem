@@ -29,7 +29,6 @@ class User {
 
         return specificUser;
     }
-
 }
 
 module.exports = User;

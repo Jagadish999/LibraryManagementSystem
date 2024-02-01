@@ -86,8 +86,6 @@ router.get('/books', async (req, res) => {
 //insert books
 router.post('/books', async (req, res) => {
 
-    console.log("Books API");
-
     const { title, ISBN, publishedDate, genre } = req.body;
 
     // Basic input validation
