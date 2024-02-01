@@ -26,6 +26,7 @@ Running this Project:
     3. API/database has all functions required to interact with database.
     4. API/models has models for all the tables.
     5. API/routes has all the routes for all endpoints.
+    6. API/test has all test cases
 
 
 # User API Documentation
