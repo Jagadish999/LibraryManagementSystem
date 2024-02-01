@@ -46,7 +46,6 @@ describe('POST /api/users', () => {
       membershipDate: '2022-01-02',
     };
 
-    // Create user1
     const response1 = await request(app)
       .post('/api/users')
       .send(user1)
@@ -54,7 +53,6 @@ describe('POST /api/users', () => {
 
     expect(response1.body.message).toBe('New User Inserted');
 
-    // Create user2
     const response2 = await request(app)
       .post('/api/users')
       .send(user2)
@@ -68,7 +66,7 @@ describe('Borrowed Books API', () => {
   // Test for updating returned books
   describe('PUT /api/borrowed-books', () => {
     it('should update the system when a book is returned and return status 500', async () => {
-      // Assuming you have data to simulate a borrowed book that is being returned
+
       const returnedBook = {
         userId: 1,
         bookId: 1,
@@ -135,11 +133,6 @@ describe('Borrowed Books API', () => {
   });
 });
 
-
-
-
-
-
 describe('POST /api/books', () => {
   // Test for successful book insertion
   it('should insert a new book and return status 201 with success message', async () => {
@@ -162,7 +155,6 @@ describe('POST /api/books', () => {
   it('should return status 400 with an error message for missing required fields', async () => {
     const invalidBook = {
       title: 'Sample Book',
-      // Missing ISBN, publishedDate, and genre
     };
 
     const response = await request(app)
@@ -190,5 +182,3 @@ describe('POST /api/books', () => {
     expect(response.body.error).toBe('Invalid Date');
   });
 });
-
-//Test cases for POST Request for inserting data of users

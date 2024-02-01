@@ -2,11 +2,6 @@ create database libraryManagementDB;
 
 use libraryManagementDB;
 
-show Tables;
-
-select * from user;
-select * from book;
-
 CREATE TABLE Users (
   UserID INT PRIMARY KEY AUTO_INCREMENT,
   Name VARCHAR(255) NOT NULL,
@@ -41,44 +36,3 @@ CREATE TABLE BorrowedBooks (
   FOREIGN KEY (BookID) REFERENCES Books(BookID) ON DELETE CASCADE
 );
 
-select * from BorrowedBooks;
-
-
-//
-user data:
-
-{
-    "name" : "test1",
-    "email" : "test1@test.com",
-    "membershipDate": "2022-01-31"
-}
-
-book data:
-
-{
-  "title": "The Great Gatsby",
-  "ISBN": "978-3-16-148410-0",
-  "publishedDate": "2022-01-31",
-  "genre": "Fiction"
-}
-
-bookDetails:
-
-  {
-    "BookID": 1,
-    "NumberOfPages": 300,
-    "Publisher": "Publisher A",
-    "Language": "English"
-  },
-
-borrow details:
-
-
- {
-  "userId": 1,
-  "bookId": 1,
-  "borrowDate": "2024-02-15",
-  "returnDate": null
-}
-
-drop database librarymanagementdb;
