@@ -1,3 +1,8 @@
+# Main assumption during update endpoint of borrowedBooks API: 
+
+    1. Rows of borrowedBooks is deleted if book is returned as it make conflict with 1-M relation between User and BorrowedBooks
+
+
 # Make sure to have node js installed in your device
 # Make sure to have mysql intalled in your device
 
