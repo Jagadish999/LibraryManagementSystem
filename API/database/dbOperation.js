@@ -18,9 +18,15 @@ module.exports = {
         return { error: 'Duplicate entry for UNIQUE Value.' };
       }
       else {
-        //Any other errors
-        console.error('Error inserting data:', error);
-        return { error: 'Error inserting data.' };
+
+        if (error.code === 'ER_DUP_ENTRY') {
+          console.error('Duplicate entry error:', error);
+          return { message: 'Duplicate entry for UNIQUE Value.' };
+        } 
+        else {
+          console.error('Error inserting data:', error);
+          return { error: 'Error inserting data.' };
+        }
       }
     }
   },

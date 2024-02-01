@@ -80,3 +80,5 @@ borrow details:
   "borrowDate": "2024-02-15",
   "returnDate": null
 }
+
+drop database librarymanagementdb;
